@@ -1,18 +1,25 @@
 //4. Program to Remove all Characters in Second String which are present in First String.
 #include <iostream>
+#include <string.h>
 using namespace std;
-
 int main() {
-    string s1,s2;
+    char s1[100], s2[100], str_rem[100];
+    int i = 0, j = 0, k = 0;
     cin >> s1 >> s2;
-    char c[s1.size()];
-    string res;
-    for(int i = 0; i < s1.size(); i++) {
-        c[i] = s1[i];
+    for (i = 0; s1[i]!= '\0'; i++) {
+        for (j = 0; s2[j] != '\0'; j++) {
+            if (s1[i] == s2[j]) {
+                continue;
+            }
+            else {
+                str_rem[k] = s2[j];
+                k++;
+            }
+        }
+        str_rem[k] = '\0';
+        strcpy(s2, str_rem);
+        k = 0;
     }
-   for(int i = 0; i < s1.size(); i++) {
-       cout << c[i] << " ";
-   }
-   cout << s1.size();
+    cout << str_rem << endl;
     return 0;
 }
