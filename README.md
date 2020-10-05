@@ -10,3 +10,9 @@
 8. How to print "Hello World" without semicolon.
 9. Where is break keyword is used.
 10. Swap value of variable without using a third variable.
+
+### Day 2
+1. Program to sort a 2d-matrix.
+2. Program to implement stack.
+3. Program to find the possible subsets of the String.
+4. How to traverse an array using pointers.
