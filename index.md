@@ -10,3 +10,9 @@
 2. Program to implement stack.
 3. Program to find the possible subsets of the String.
 4. How to traverse an array using pointers.
+
+### Day 3
+1. Explain what is stack.
+2. Program to check if the parenthesis of an expression are balanced or not.
+3. What is prefix and postfix expressions and what is the role of stack in it.
+4. Design a Stack which returns minimim element in a constant time.
