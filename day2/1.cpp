@@ -5,8 +5,7 @@
 using namespace std;
 
 int main() {
-    vector<vector <int>> a{{9,8,7},{6,5,4},{3,2,1}};
-    vector<vector <int>> r;
+    vector<vector <int>> a{{7,6,9},{8,4,5},{3,2,1}};
     vector<int> b;
     for(int i = 0; i < a.size(); i++) {
         for(int j = 0; j < a[i].size(); j++) {
@@ -14,17 +13,12 @@ int main() {
         }
     }
     sort(b.begin(), b.end());
-    //not working
-    int k = 0;
-    for(int i = 0; i < 3; i++) {
-        for(int j = 0; j < 3; j++) {
-            r[i].push_back(b[k]);
-            k++;
-        }
+    for(int i = 0; i < b.size(); i++) {
+        a[i/a.size()][i%a[0].size()] = b[i];
     }
-    for(int i = 0; i < r.size(); i++) {
-        for(int j = 0; j < r[i].size(); j++) {
-           cout << r[i][j] << " ";
+    for(int i = 0; i < a.size(); i++) {
+        for(int j = 0; j < a[i].size(); j++) {
+           cout << a[i][j] << " ";
         }
         cout << endl;
     }
